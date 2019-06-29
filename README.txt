@@ -1,0 +1,15 @@
+This is the code used to:
+	-  calculate transsortativity
+	-  increase and decrease transsortativity in any network
+	-  calculate the freindship paradox in a network
+	-  calculate the largest vulnerable component
+
+All code developed by Xin-Zeng Wu (2019)
+email: energiya@gmail.com
+
+* 2k_swap_map.cpp  :  Performs 2K-rewiring on the input network (as edgelist) to achieve higher or lower assortativity based on Metropolis alg proposed by Mark Newman.
+* 3k_swap_map.cpp  :  Performs 3K-rewiring on the input network (as edgelist) to achieve higher or lower transsortativity based on Metropolis alg proposed by Mark Newman.
+* fspdxavg.cpp  : Calculate the neighbor assortativity of the input network (as edgelist), output as [k, r_{3k}(k), p(k)]. p(k) can be used for calculating global \bar{r}_{3k}. (Computations of Figure 2 is performed on this code)
+* vulnerable.py  :  Find the number of nodes and edges of the giant vulnerable component in the network by threshold (phi), output as [1/phi, n_gvul, e_gvul] (Simulations of Figure 4 is performed on this code)
+* zeroone_opt.c  :  Calculate the strength of the majority illusion on a series of assignments of attribute x=1 with increasing k-x correlation, and compare with theoretical results based on Eq (11). (Simulations of Figure 3 is performed on this code)
+
