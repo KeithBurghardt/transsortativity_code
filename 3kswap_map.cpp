@@ -48,7 +48,7 @@ int main()
   for (int i=0; i<k_max+1; i++) s += (i-avg_q)*(i-avg_q)*Q[i];
   for (int i=0; i<n; i++) for (int j=0; j<k[i]; j++) c += (k[i]-avg_q)*(k[nn_seq[i][j]]-avg_q)/e/2;
   double r = c/s;
-  std::cout << "Network assortativity: " << r << std::endl;
+  std::cout << "Transsortativity: " << r << std::endl;
 
   std::vector<double> nn_avg(n);
   std::vector<double> nn_avg_sq(n);
@@ -67,7 +67,7 @@ int main()
     rho_k[i] = (i * (P_ff[i][1] - P_ff[i][0] * P_ff[i][0]) / (P_ff[i][2] - P_ff[i][0] * P_ff[i][0]) - 1) / (i-1); /* Corr Coef */
   double rho_global = 0.0;
   for (int i=2; i<k_max+1; i++) rho_global += rho_k[i] * (double) k_hist[i] / n;
-  std::cout << "Global Weighted Nb-Nb Corr: " << rho_global << std::endl;
+  std::cout << "Mean Transsortativity: " << rho_global << std::endl;
 
   double back = 0.5;
   int count = 0, swap = 0;
@@ -165,7 +165,7 @@ int main()
         }
         
     }
-    std::cout << "Assort.: " << r << ", Nb-Nb: " << rho_global << ", Swap: " << swap << ", Back: " << back << std::endl;
+    std::cout << "Assort.: " << r << ", Transsortativity: " << rho_global << ", Swap: " << swap << ", Back: " << back << std::endl;
     swap = 0;
   }
 
