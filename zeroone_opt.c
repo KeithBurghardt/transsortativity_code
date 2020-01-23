@@ -24,8 +24,12 @@ int main(int argc, char *argv[]) {
   for (int i=0; i<n; i++) A[i] = new bool[n];
   for (int i=0; i<n; i++) memset(A[i], 0, sizeof(bool)*n);
   int i, j;
+  // infile
+  string infile = "../Preprocess/Sets24corr/24mn07_c30";
+  // outfile
+  string of = "zeroone.out";
   FILE *edgelist;
-  edgelist = fopen("../Preprocess/Sets24corr/24mn07_c30", "r"); /* Input file */
+  edgelist = fopen(infile, "r"); /* Input file */
   char line[16];
   while (fgets(line, 16, edgelist))
     if (line[0] != '#' && sscanf(line, "%d %d", &i, &j) == 2) {
@@ -34,7 +38,7 @@ int main(int argc, char *argv[]) {
     }
   fclose(edgelist);
   FILE *outfile;
-  outfile = fopen("zeroone.out", "w"); /* Output file */
+  outfile = fopen(of, "w"); /* Output file */
 
   /* assortativity */
   double Etotal = 0.0, c = 0.0, s = 0.0;
