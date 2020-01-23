@@ -1,8 +1,10 @@
+## Code for measuring assortativity and transsortativity
+## and algorithms to change assortativity and transsortativity in arbitrary networks
 This is the code used to:
-	-  calculate transsortativity
-	-  increase and decrease transsortativity in any network
-	-  calculate the freindship paradox in a network
-	-  calculate the largest vulnerable component
+-  calculate transsortativity
+-  increase and decrease transsortativity in any network
+-  calculate the freindship paradox in a network
+-  calculate the largest vulnerable component
 
 All code developed by Xin-Zeng Wu (2019)
 email: energiya@gmail.com
