@@ -7,8 +7,9 @@ import scipy.sparse.csgraph as csgraph
 import matplotlib.pyplot as plt
 from matplotlib import rc
 rc('text', usetex=True)
-
-with open('../Preprocess/Sets21corr/21sn15_c40') as f:
+infile = '../Preprocess/Sets21corr/21sn15_c40'
+outfile = './vulnerable.out'
+with open(infile) as f:
   lines = (line for line in f if not line.startswith('#'))
   U0, V0 = np.loadtxt(lines, delimiter='\t', unpack=True, dtype=int)
 
@@ -46,7 +47,7 @@ for i in range(nk):
   giant_list = sparse.find(G)
   e_vul[i] = giant_list[0].size/2
 
-outfile = open('./vulnerable.out','w')
+outfile = open(outfile,'w')
 print("[", end='', file=outfile)
 for i in range(nk):
   print("[", k_hist_nz[i], ", ", n_vul[i], ", ", e_vul[i], "]", sep='', end='', file=outfile)
