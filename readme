@@ -8,11 +8,32 @@ All code developed by Xin-Zeng Wu (2019)
 email: energiya@gmail.com
 
 - 2k_swap_map.cpp  :  Performs 2K-rewiring on the input network (as edgelist) to achieve higher or lower assortativity based on Metropolis alg proposed by Mark Newman.
+		      Input: 
+		      	- edgelist (change edgelist_file string)
+		      Output: new edgelist files with correct transsortativity value
+		      "rdmswap_" + count
 
-- 3k_swap_map.cpp  :  Performs 3K-rewiring on the input network (as edgelist) to achieve higher or lower neoghbor assortativity based on Metropolis alg proposed by Mark Newman.
+- 3k_swap_map.cpp  :  Performs 3K-rewiring on the input network (as edgelist) to achieve higher or lower neoghbor assortativity based on greedy algorithm.
+		      Input: 
+		      	- edgelist (change edgelist_file string)
+		      Output: new edgelist files with correct transsortativity value
+		      "rdmswap_" + count
 
-- fspdxavg.cpp  : Calculate the neighbor assortativity of the input network (as edgelist), output as [k, r_{3k}(k), p(k)]. p(k) can be used for calculating global \bar{r}_{3k}. (Computations of Figure 2 is performed on this code)
+- fspdxavg.cpp  : Calculate the transsortativity of the input network (as edgelist)
+		  output as [k, r_{3k}(k), p(k)]. 
+		  edit input_file = "./Google2"
+                  edit output_file = "fspdx.out"
+		  mean transsortativity can be calculated with \bar{r}_{3k}. 
+		  (Computations of Figure 2 is performed on this code)
 
-- vulnerable.py  :  Find the number of nodes and edges of the giant vulnerable component in the network by threshold (phi), output as [1/phi, n_gvul, e_gvul] (Simulations of Figure 4 is performed on this code)
+- vulnerable.py  :  Find the number of nodes and edges of the giant vulnerable component in the network using the Watts cascade model
+		    input: 
+		    	- infile: undirected edgelist
+			- outfile = './vulnerable.out'
+		    output: [1/phi, n_gvul, e_gvul] (Simulations of Figure 4 is performed on this code)
+		    (iterates sequentially through range of values of phi)
 
-- zeroone_opt.c  :  Calculate the strength of the friendship paradox on a series of assignments of attribute x=1 with increasing k-x correlation, and compare with theoretical results based on Eq (11). (Simulations of Figure 3 is performed on this code)
+- zeroone_opt.c  :  Calculate the strength of the friendship paradox (fraction of nodes with friendship paradox) on a series of assignments of attribute x=1 with increasing k-x correlation, and compare with theoretical results based on Eq (2.7). (Simulations of Figure 3 is performed on this code)
+                    input: 
+		        - input file
+			- output file ("of" in the code)
