@@ -11,10 +11,12 @@
 #include <cmath>
 
 int main() {
+  string input_file = "./Google2"
+  string output_file = "fspdx.out"
   auto tstart = std::chrono::system_clock::now();
   std::map<int, std::vector<int> > nn_map;
   std::string line;
-  std::ifstream edgelist("./Google2");
+  std::ifstream edgelist(input_file);
   while (std::getline(edgelist,line)) {
     int i, j;
     std::istringstream iss(line);
@@ -25,7 +27,7 @@ int main() {
   }
   edgelist.close();
   std::ofstream outfile;
-  outfile.open("fspdx.out"); /* Output file */
+  outfile.open(output_file); /* Output file */
 
   int n = nn_map.rbegin()->first + 1;
   std::vector<std::vector<int> > nn_seq(n);
