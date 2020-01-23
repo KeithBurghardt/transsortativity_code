@@ -10,12 +10,13 @@
 
 int main()
 {
+  string edgelist_file = "./Sets21o5/21o5sp30_c45"
   int step = 100000, dir_rho = 1;
   double rec_rho = -0.05;
 
   std::map<int, std::vector<int> > nn_map;
   std::string line;
-  std::ifstream edgelist("./Sets21o5/21o5sp30_c45");
+  std::ifstream edgelist(edgelist_file);
   while (std::getline(edgelist,line)) {
     int i, j;
     std::istringstream iss(line);
