@@ -1,5 +1,5 @@
-## Code for measuring assortativity and transsortativity
-## and algorithms to change assortativity and transsortativity in arbitrary networks
+## Code for measuring assortativity and transsortativity and algorithms to change assortativity and transsortativity in arbitrary networks
+
 This is the code used to:
 -  calculate transsortativity
 -  increase and decrease transsortativity in any network
