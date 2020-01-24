@@ -72,7 +72,7 @@ email: energiya@gmail.com
 			
 		     Output:
 		     
-		        - Increase steps of corr, output in one file: [corr, paradox, P_maj]
+		       - Increase steps of corr, output in one file: [corr, paradox, P_maj]
 			
 			- corr: correlation between attribute and degree
 			
