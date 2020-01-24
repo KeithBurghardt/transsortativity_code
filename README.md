@@ -1,6 +1,11 @@
 ## Code for measuring assortativity and transsortativity and algorithms to change assortativity and transsortativity in arbitrary networks
 
-Code is written in C/C++
+Code is written in C/C++. To run:
+- Change edgelist file name (see below)
+	- edgelist is defined as "node1 \t node2", where node1 and node2 are integers
+- Compile by g++ -O3 filename -o execute_code
+- ./execute_code
+
 
 This is the code used to:
 -  calculate transsortativity
