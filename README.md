@@ -1,5 +1,6 @@
 ## Code for measuring assortativity and transsortativity and algorithms to change assortativity and transsortativity in arbitrary networks
-======
+
+Code is written in C/C++
 
 This is the code used to:
 -  calculate transsortativity
