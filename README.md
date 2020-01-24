@@ -66,6 +66,7 @@ email: energiya@gmail.com
 
 - zeroone_opt.c  :  Calculate the strength of the majority illusion on a series of assignments of attribute x=1 with increasing k-x correlation, and compare with theoretical results based on Eq (2.7). 
 
+
                     Input: 
 		    
 		        - edgelist (change input_file string)
